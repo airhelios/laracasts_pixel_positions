@@ -19,4 +19,8 @@ class Employer extends Model
     {
         return $this->hasMany(Job::class);
     }
+    protected $fillable = [
+        'name',
+        'logo'
+    ];
 }
