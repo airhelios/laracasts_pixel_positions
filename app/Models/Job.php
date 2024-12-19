@@ -27,5 +27,7 @@ class Job extends Model
     {
         return $this->belongsTo(Employer::class);
     }
+
+    protected $guarded = []; // Allows all attributes for mass assignment
 }
 

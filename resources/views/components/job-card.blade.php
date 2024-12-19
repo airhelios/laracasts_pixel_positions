@@ -4,8 +4,12 @@
         {{ $job->employer->name }}
     </div>
     <div class="py-8">
-        <h3 class="group-hover:text-blue-800 text-xl font-bold translation-colors duration-300"> {{ $job->title  }}</h3>
-        <p class="text-sm mt-4">{{ $job->employer->salary}}</p>
+        <h3 class="group-hover:text-blue-800 text-xl font-bold translation-colors duration-300">
+            <a href="{{ $job->url }}" target="_blank">
+                {{ $job->title }}
+            </a>
+        </h3>
+        <p class="text-sm mt-4">{{ $job->salary}}</p>
     </div>
     <div class="flex justify-between items-center mt-auto">
         <div>
@@ -14,6 +18,6 @@
             @endforeach
             
         </div>
-        <x-employer-logo :width=42/>
+        <x-employer-logo :width=42 :employer="$job->employer"/>
     </div>
 </x-panel >

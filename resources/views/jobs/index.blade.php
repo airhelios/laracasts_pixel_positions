@@ -4,9 +4,14 @@
             <h1 class="font-bold text-4xl">
                 Let's Find Your Next Job
             </h1>
-            <form action="" class="mt-6">
+            {{-- <form action="" class="mt-6">
                 <input type="text" placeholder="Web Developer" class="rounded-xl bg-white/5 border-white/10 px-5 py-5 w-full max-w-xl">
-            </form>
+            </form> --}}
+
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input name="q" placeholder="Web Developer..." :label=false></x-forms.input>
+            </x-forms.form>
+
         </section>
         <section class="pt-10">
             <x-section-heading>Featured Jobs</x-section-heading>
